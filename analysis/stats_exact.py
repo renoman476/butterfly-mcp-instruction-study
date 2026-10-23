@@ -124,3 +124,13 @@ if __name__ == '__main__':
             out[name] = {'U': U, 'p1_exact': p1, 'p2_exact': p2, 'r_rb': rrb}
             print(name, 'U=%.0f 단측 p=%.4f 양측 p=%.4f r_rb=%.2f' % (U, p1, p2, rrb))
     json.dump(out, open(ROOT + '/data/stats_exact.json', 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
+
+
+# ---------------------------------------------------------------- 쉬운 버전 비교: 수치 기준 있음(Q·M·C, 9회) 대 없음(N·T·NV·TV, 12회)
+if __name__ == '__main__':
+    if 'C' in first:
+        a = first['Q'] + first['M'] + first['C']; b = first['N'] + first['T'] + first['NV'] + first['TV']
+        U, p1, p2, rrb, tot = mwu_exact(a, b)
+        out['pooled_9v12'] = {'U': U, 'p1_exact': p1, 'p2_exact': p2, 'r_rb': rrb, 'n_perm': tot, 'n1': len(a), 'n2': len(b)}
+        print('수치 기준 있음 9회 vs 없음 12회  U=%.0f  정확 양측 p=%.2e (%d 분할)  r_rb=%.2f' % (U, p2, tot, rrb))
+        json.dump(out, open(ROOT + '/data/stats_exact.json', 'w', encoding='utf-8'), ensure_ascii=False, indent=1)

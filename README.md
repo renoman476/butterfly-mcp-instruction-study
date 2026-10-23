@@ -55,3 +55,17 @@ print(r['achievement'], r['constraint'])
 - 측정·분석 코드와 지시문은 연구 검증 목적으로 공개합니다.
 - HIP 파일은 Houdini Non-Commercial(.hipnc 성격)로 제작되었습니다.
 - 선행 사례(MGS KOREA, 2026)의 원본 작업지시서와 영상은 포함하지 않습니다.
+
+## 논문 표·수치와 자료의 대응
+
+| 논문 내용 | 자료 | 재계산 방법 |
+|---|---|---|
+| 시행별 충족 점수(정식본 <표 5>·부록 B, 쉬운 버전 <표 3>) | `data/scores_by_trial.csv`, 원자료 `data/measure/E1_*.json`·`E3_*.json` | Houdini에서 `analysis/measure.py`로 `houdini/trials/*.hip` 재측정 |
+| 정확 검정 p값과 효과 크기 | `data/stats_exact.json` | `python analysis/stats_exact.py` (numpy, scipy). 분석 단위는 시행, 정확 Kruskal–Wallis(15,400 배정)·정확 Mann–Whitney(전체 분할 열거) |
+| 쉬운 버전 “수치 기준 있음 9회 대 없음 12회” | `stats_exact.json`의 `pooled_9v12` | 같은 스크립트(293,930 분할 열거, U = 108) |
+| 정식본 “결과 기준 주효과(M·C 대 N·T)” | `stats_exact.json`의 `2x2_numeric` | 같은 스크립트(924 분할 열거, U = 36) |
+| 실험 2 결과(정식본 <표 5>·부록 G, 쉬운 버전 <표 4>) | `data/e2_summary.json`, `data/measure/E2_*.json` | `analysis/measure2.py`, `analysis/e2_eval.py` |
+| 자기 검증 보고 대 실제 결과 | `data/selfcheck_reports.json` | 보고문(`prompts/`, `transcripts/`)과 측정 원자료 대조 |
+| 실행 조건(모델·빌드·설정) | `logs/run_conditions.json` | 실험 1·2: Claude Code 2.1.295(2026-10-14), 실험 3: 2.1.308(2026-10-23) |
+
+논문이 인용하는 자료 상태는 태그 `v1.1`입니다.
