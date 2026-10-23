@@ -1,0 +1,111 @@
+===== 입력 0 =====
+당신은 Houdini MCP(mcp__houdini__* 도구)로 연결된 Houdini를 조작하는 애니메이션 에이전트다. 아래 지시를 수행하라.
+
+[작업 지시] Houdini MCP — 소녀와 호랑나비의 만남 (F1–264, 24fps, 11초)
+
+■ 작업 대상
+- Houdini MCP 도구로 기준 씬 D:/claude/butterfly_mcp_paper/houdini/base_scene.hip 를 열어 작업하고, 완료 후 D:/claude/butterfly_mcp_paper/houdini/trials/E3_TV_r3_v0.hip 로 저장한다.
+- 이 씬에는 모델·리그·카메라·조명이 이미 준비되어 있다. 너는 애니메이션만 작성한다.
+
+■ 씬 구성
+- /obj/girl : Houdini 기본 Dummy(simplefemale). 의자에 앉아 있고 양손은 허벅지 위에 있다. 리그 컨트롤은 노드의 파라미터(예: 머리 headrotatex/y/z, 왼팔 IK ikwristlefttranslate*/ikwristleftrotate*, 손가락 left/right{index,middle,ring,little,thumb}{1,2,3}rotate 등)로 노출되어 있다.
+- /obj/butterfly : 호랑나비. CTRL_body(전체 위치·회전, 나비의 앞=로컬 +Z, 위=+Y), CTRL_wing_L / CTRL_wing_R(각각 flap 파라미터, +값이 날개를 위로 올림).
+- /obj/hand_contact : 소녀 왼손 손등 위의 착지 지점 locator. 왼손을 따라 움직이며, 로컬 Y축이 손등 바깥(위) 방향이다.
+- 카메라: /obj/CAM_A_MASTER(50mm 마스터), /obj/CAM_B_HAND(85mm 손 클로즈업), /obj/CAM_C_TRANSITION(65mm).
+- 좌표 단위는 미터, 위쪽은 +Y, 소녀는 +Z 방향을 바라본다.
+
+■ 타임라인
+- CUT 1  0–2초  (F1–48)   : 나비 등장, 소녀가 나비를 발견
+- CUT 2  2–4초  (F49–96)  : 나비가 얼굴 앞을 지나 손 쪽으로 접근, 소녀가 왼손을 내밂
+- CUT 3  4–6초  (F97–144) : 손 위에서 머물다가 F132(5.5초)에 손등에 착지
+- CUT 4  6–9초  (F145–216): 손 위에서 첫 교감
+- CUT 5  9–11초 (F217–264): 이륙하여 날아감
+
+■ 공통 조건
+- 모델(나비·소녀 지오메트리), 카메라, 조명, 바닥·의자는 수정하지 않는다.
+- 렌더링(Karma 등)은 하지 않는다. 확인은 씬 데이터나 뷰포트로 한다.
+- 이 작업 폴더(D:/claude/butterfly_mcp_paper)의 다른 파일은 열거나 읽지 않는다.
+- 작업이 끝나면 저장 경로와 함께, 무엇을 어떻게 만들었는지 간단히 보고한다.
+
+■ 검증 절차
+- 저장하기 전에, 아래 각 요구사항이 충족되었는지 씬 데이터(노드의 월드 위치·회전, 파라미터 값 등)를 프레임별로 조회·계산하는 검사 스크립트를 직접 작성해 실행한다.
+- 충족되지 않은 항목이 있으면 수정한 뒤 다시 검사하고, 모든 항목이 충족된 것을 확인한 다음 저장한다.
+- 보고에 항목별 검사 방법과 결과를 함께 적는다.
+
+■ 요구사항
+
+[CUT 1]
+- F1에 CTRL_body를 CAM_A_MASTER 프러스텀 바깥에 두고, 경로의 첫 구간이 프러스텀 안으로 진입하도록 위치 키를 설계한다.
+- 진입 구간 위치 키는 완만한 접선(ease 또는 자동 bezier)을 사용하고, 짧은 간격에 큰 위치 변화를 주는 키를 두지 않는다.
+- 비행 경로는 여러 제어점을 갖는 3D 스플라인(위치 키프레임 또는 curve 기반 path)으로 저작하고, 원형 궤도나 직선 보간을 사용하지 않는다.
+- 저작한 경로 위에 낮은 진폭의 세로 bobbing 레이어(사인 또는 노이즈 기반 오프셋)를 더한다.
+- flap 파라미터를 주기 함수(사인 expression 또는 반복 키)로 구동하고, 비행 중에는 큰 진폭을 사용한다.
+- head 회전 컨트롤(headrotatex/y)로 F1에는 아래쪽 시선을, 발견 이후에는 나비 방향으로 회전하는 키를 둔다.
+
+[CUT 2]
+- F49–96 경로 제어점 하나를 rig_bone_head 의 전방축(얼굴 정면) 쪽에 배치해 얼굴 앞을 통과시키고, 머리와 충돌하지 않도록 간격을 둔다.
+- 왼팔 IK 손목 컨트롤(ikwristlefttranslate*/ikwristleftrotate*) 키를 F49 이후에 시작해 착지 전에 끝내고, ease in/out 보간을 쓰며 중간 키는 최소화한다.
+
+[CUT 3]
+- hand_contact 기준 상대 위치로 hover 구간 키를 두고, F97–131 사이에 속도가 거의 0인 유지 구간(접선 0 키)을 만든다.
+- F132–216 동안 CTRL_body 를 hand_contact 에 constraint(또는 hand_contact 의 월드 변환을 따르는 expression/키)로 붙인다.
+- 착지 키에 ease-in(도착 접선 0)을 주고, 착지 직전 키 간격을 넓혀 감속 구간을 확보한다.
+- F108 이후에는 bobbing·노이즈 레이어의 가중치를 0으로 감쇠시켜 경로가 hand_contact 로 수렴하게 한다.
+- F110–131 구간에서 flap 구동의 주파수 값은 올리고 진폭 값은 줄이는 키를 둔다.
+- ikwristleftrotate* 로 hand_contact 의 로컬 Y축이 월드 위쪽을 향하게 맞춘다.
+- 왼손 목표 위치를 CAM_B_HAND 프러스텀 중앙부에 둔다.
+
+[CUT 4]
+- F145–216 구간의 flap 은 비행용 주기 구동을 끄고, 느린 여닫기 사이클을 키프레임으로 작성한다.
+- 착지 중에는 나비 몸의 회전을 hand_contact 회전에 맞추고, flap 하한을 0° 이상으로 둔다.
+- F145–216 구간의 머리 회전 타깃을 나비(또는 hand_contact)로 둔다.
+- headrotatez(roll)에 작은 키를 추가한다.
+- F132–216 동안 왼팔 IK 손목 컨트롤 값을 고정(hold)한다.
+
+[CUT 5]
+- F217 이후 hand_contact 고정을 blend 로 해제하고, 손 위 상승 구간 키 → 가속 이탈 경로 키 순서로 두며 flap 주파수를 올린다.
+- 왼손을 내리는 키의 시작을 나비 이탈 키 이후로 배치한다.
+
+[전체 구간]
+- flap 값의 하한을 몸통 관통이 생기지 않는 범위로 제한한다.
+- 머리 회전을 나비 위치로부터 계산(look-at 또는 expression)하되 시간 지연(lag)을 적용한다.
+- 오른팔 IK 컨트롤에는 키를 주지 않거나 기준 값으로 고정한다.
+- 손가락 컨트롤(left/right{index,middle,ring,little}{1,2,3}rotate)로 손가락마다 다른 굽힘 값을 준다.
+- 키 사이 보간은 연속(bezier/ease)으로 하고, constraint 전환은 blend 로 한다.
+- 경로 제어점을 소녀 몸 지오메트리 바깥에 두고, 지오메트리와의 거리를 확인한다.
+
+===== 입력 1 =====
+The coordinator sent a message while you were working:
+작업이 외부 사용량 한도로 중단되었다가 재개되었다. 현재 Houdini 씬 상태를 신뢰하지 말고, 직전 지시를 이어서 완료한 뒤 지정된 경로에 저장하고 보고해줘.
+
+Address this before completing your current task.
+
+===== 입력 2 =====
+The coordinator sent a message while you were working:
+Houdini 연결이 복구되었다. 현재 Houdini 씬 상태를 신뢰하지 말고, 직전 지시를 이어서 완료한 뒤 지정된 경로에 저장하고 보고해줘.
+
+Address this before completing your current task.
+
+===== 입력 3 =====
+The coordinator sent a message while you were working:
+[추가 수정 지시] 방금 저장한 씬을 검토한 결과, 아래 요구사항이 아직 충족되지 않았다. 나머지는 유지하면서 아래 항목을 수정하고 D:/claude/butterfly_mcp_paper/houdini/trials/E3_TV_r3_v1.hip 로 저장한 뒤 보고해줘.
+
+- hand_contact 기준 상대 위치로 hover 구간 키를 두고, F97–131 사이에 속도가 거의 0인 유지 구간(접선 0 키)을 만든다.
+- F110–131 구간에서 flap 구동의 주파수 값은 올리고 진폭 값은 줄이는 키를 둔다.
+- F145–216 구간의 flap 은 비행용 주기 구동을 끄고, 느린 여닫기 사이클을 키프레임으로 작성한다.
+- F217 이후 hand_contact 고정을 blend 로 해제하고, 손 위 상승 구간 키 → 가속 이탈 경로 키 순서로 두며 flap 주파수를 올린다.
+- 머리 회전을 나비 위치로부터 계산(look-at 또는 expression)하되 시간 지연(lag)을 적용한다.
+
+Address this before completing your current task.
+
+===== 입력 4 =====
+The coordinator sent a message while you were working:
+[추가 수정 지시] 방금 저장한 씬을 검토한 결과, 아래 요구사항이 아직 충족되지 않았다. 나머지는 유지하면서 아래 항목을 수정하고 D:/claude/butterfly_mcp_paper/houdini/trials/E3_TV_r3_v2.hip 로 저장한 뒤 보고해줘.
+
+- hand_contact 기준 상대 위치로 hover 구간 키를 두고, F97–131 사이에 속도가 거의 0인 유지 구간(접선 0 키)을 만든다.
+- F110–131 구간에서 flap 구동의 주파수 값은 올리고 진폭 값은 줄이는 키를 둔다.
+- F217 이후 hand_contact 고정을 blend 로 해제하고, 손 위 상승 구간 키 → 가속 이탈 경로 키 순서로 두며 flap 주파수를 올린다.
+- 머리 회전을 나비 위치로부터 계산(look-at 또는 expression)하되 시간 지연(lag)을 적용한다.
+
+Address this before completing your current task.
+

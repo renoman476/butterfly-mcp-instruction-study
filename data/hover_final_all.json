@@ -1,0 +1,38 @@
+{
+ "E3_C_r1_v0": {
+  "pre_hover_cm": 12.5,
+  "takeoff_lift_cm": 17.8
+ },
+ "E3_C_r2_v1": {
+  "pre_hover_cm": 12.0,
+  "takeoff_lift_cm": 17.3
+ },
+ "E3_C_r3_v1": {
+  "pre_hover_cm": 11.9,
+  "takeoff_lift_cm": 17.2
+ },
+ "E3_NV_r1_v2": {
+  "pre_hover_cm": 9.5,
+  "takeoff_lift_cm": 6.9
+ },
+ "E3_NV_r2_v2": {
+  "pre_hover_cm": 8.4,
+  "takeoff_lift_cm": 7.6
+ },
+ "E3_NV_r3_v2": {
+  "pre_hover_cm": 7.7,
+  "takeoff_lift_cm": 11.3
+ },
+ "E3_TV_r1_v2": {
+  "pre_hover_cm": 6.0,
+  "takeoff_lift_cm": 16.1
+ },
+ "E3_TV_r2_v2": {
+  "pre_hover_cm": 10.0,
+  "takeoff_lift_cm": 12.6
+ },
+ "E3_TV_r3_v2": {
+  "pre_hover_cm": 5.0,
+  "takeoff_lift_cm": 13.7
+ }
+}

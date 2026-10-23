@@ -1,0 +1,27 @@
+{
+ "trial": "E2_R1_Pp_r2",
+ "target": {
+  "hover_ref": 20,
+  "hover_rev": 30,
+  "pass": true
+ },
+ "collateral": {
+  "butterfly_rms_cm": 2.461,
+  "butterfly_max_cm": 12.896,
+  "flap_rms_deg": 0.0,
+  "landing_ref": 128,
+  "landing_rev": 130,
+  "head_mean_deg": 0.0,
+  "left_hand_rms_cm": 0.0,
+  "right_hand_rms_cm": 0.0,
+  "left_fingers_mean_deg": 0.0,
+  "right_fingers_mean_deg": 0.0,
+  "camera_parms_changed": 0
+ },
+ "preserved": false,
+ "checks_pass": 28,
+ "regressions": [
+  "B09_prelanding_calm",
+  "Q01_no_pop"
+ ]
+}

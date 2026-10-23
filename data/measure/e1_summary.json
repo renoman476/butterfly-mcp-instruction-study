@@ -1,0 +1,860 @@
+{
+ "trials": {
+  "E1_N_r1": {
+   "style": "N",
+   "rounds": 2,
+   "v": [
+    {
+     "ach": 20,
+     "con": 6,
+     "total": 26,
+     "ach_ex": 18,
+     "con_ex": 6,
+     "n_ex": 28,
+     "fails": [
+      "B02_entry_accel",
+      "B06_hover",
+      "B08_soft_landing",
+      "B15_takeoff"
+     ],
+     "regressions": []
+    },
+    {
+     "ach": 21,
+     "con": 6,
+     "total": 27,
+     "ach_ex": 19,
+     "con_ex": 6,
+     "n_ex": 28,
+     "fails": [
+      "B02_entry_accel",
+      "B06_hover",
+      "B15_takeoff"
+     ],
+     "regressions": []
+    },
+    {
+     "ach": 21,
+     "con": 6,
+     "total": 27,
+     "ach_ex": 19,
+     "con_ex": 6,
+     "n_ex": 28,
+     "fails": [
+      "B02_entry_accel",
+      "B06_hover",
+      "B15_takeoff"
+     ],
+     "regressions": []
+    }
+   ],
+   "first_total": 26,
+   "final_total": 27,
+   "all_pass_round": null,
+   "n_regressions": 0,
+   "cost_rounds": [
+    {
+     "duration_s": 521.8,
+     "tool_uses": 38,
+     "houdini_calls": 36
+    },
+    {
+     "duration_s": 159.4,
+     "tool_uses": 7,
+     "houdini_calls": 6
+    },
+    {
+     "duration_s": 152.2,
+     "tool_uses": 6,
+     "houdini_calls": 5
+    }
+   ],
+   "duration_total_s": 833.4,
+   "tool_uses_total": 51,
+   "duration_first_s": 521.8,
+   "tool_uses_first": 38
+  },
+  "E1_N_r2": {
+   "style": "N",
+   "rounds": 2,
+   "v": [
+    {
+     "ach": 18,
+     "con": 5,
+     "total": 23,
+     "ach_ex": 17,
+     "con_ex": 5,
+     "n_ex": 28,
+     "fails": [
+      "B02_entry_accel",
+      "B06_hover",
+      "B08_soft_landing",
+      "B09_prelanding_calm",
+      "B11_prelanding_flap",
+      "B15_takeoff",
+      "Q01_no_pop"
+     ],
+     "regressions": []
+    },
+    {
+     "ach": 19,
+     "con": 7,
+     "total": 26,
+     "ach_ex": 17,
+     "con_ex": 7,
+     "n_ex": 28,
+     "fails": [
+      "B06_hover",
+      "B08_soft_landing",
+      "B11_prelanding_flap",
+      "B15_takeoff"
+     ],
+     "regressions": []
+    },
+    {
+     "ach": 19,
+     "con": 7,
+     "total": 26,
+     "ach_ex": 17,
+     "con_ex": 7,
+     "n_ex": 28,
+     "fails": [
+      "B06_hover",
+      "B11_prelanding_flap",
+      "B12_onhand_flap",
+      "B15_takeoff"
+     ],
+     "regressions": [
+      "B12_onhand_flap"
+     ]
+    }
+   ],
+   "first_total": 23,
+   "final_total": 26,
+   "all_pass_round": null,
+   "n_regressions": 1,
+   "cost_rounds": [
+    {
+     "duration_s": 737.6,
+     "tool_uses": 58,
+     "houdini_calls": 56
+    },
+    {
+     "duration_s": 260.6,
+     "tool_uses": 13,
+     "houdini_calls": 12
+    },
+    {
+     "duration_s": 113.1,
+     "tool_uses": 5,
+     "houdini_calls": 4
+    }
+   ],
+   "duration_total_s": 1111.3,
+   "tool_uses_total": 76,
+   "duration_first_s": 737.6,
+   "tool_uses_first": 58
+  },
+  "E1_N_r3": {
+   "style": "N",
+   "rounds": 2,
+   "v": [
+    {
+     "ach": 20,
+     "con": 7,
+     "total": 27,
+     "ach_ex": 19,
+     "con_ex": 7,
+     "n_ex": 28,
+     "fails": [
+      "B08_soft_landing",
+      "B09_prelanding_calm",
+      "B15_takeoff"
+     ],
+     "regressions": []
+    },
+    {
+     "ach": 21,
+     "con": 7,
+     "total": 28,
+     "ach_ex": 20,
+     "con_ex": 7,
+     "n_ex": 28,
+     "fails": [
+      "B09_prelanding_calm",
+      "B15_takeoff"
+     ],
+     "regressions": []
+    },
+    {
+     "ach": 22,
+     "con": 7,
+     "total": 29,
+     "ach_ex": 20,
+     "con_ex": 7,
+     "n_ex": 28,
+     "fails": [
+      "B15_takeoff"
+     ],
+     "regressions": []
+    }
+   ],
+   "first_total": 27,
+   "final_total": 29,
+   "all_pass_round": null,
+   "n_regressions": 0,
+   "cost_rounds": [
+    {
+     "duration_s": 650.0,
+     "tool_uses": 52,
+     "houdini_calls": 32
+    },
+    {
+     "duration_s": 241.8,
+     "tool_uses": 16,
+     "houdini_calls": 5
+    },
+    {
+     "duration_s": 166.7,
+     "tool_uses": 14,
+     "houdini_calls": 4
+    }
+   ],
+   "duration_total_s": 1058.5,
+   "tool_uses_total": 82,
+   "duration_first_s": 650.0,
+   "tool_uses_first": 52
+  },
+  "E1_T_r1": {
+   "style": "T",
+   "rounds": 2,
+   "v": [
+    {
+     "ach": 21,
+     "con": 7,
+     "total": 28,
+     "ach_ex": 19,
+     "con_ex": 7,
+     "n_ex": 28,
+     "fails": [
+      "B06_hover",
+      "B11_prelanding_flap"
+     ],
+     "regressions": []
+    },
+    {
+     "ach": 20,
+     "con": 7,
+     "total": 27,
+     "ach_ex": 18,
+     "con_ex": 7,
+     "n_ex": 28,
+     "fails": [
+      "B06_hover",
+      "B08_soft_landing",
+      "B11_prelanding_flap"
+     ],
+     "regressions": [
+      "B08_soft_landing"
+     ]
+    },
+    {
+     "ach": 20,
+     "con": 7,
+     "total": 27,
+     "ach_ex": 18,
+     "con_ex": 7,
+     "n_ex": 28,
+     "fails": [
+      "B06_hover",
+      "B08_soft_landing",
+      "B11_prelanding_flap"
+     ],
+     "regressions": []
+    }
+   ],
+   "first_total": 28,
+   "final_total": 27,
+   "all_pass_round": null,
+   "n_regressions": 1,
+   "cost_rounds": [
+    {
+     "duration_s": 567.8,
+     "tool_uses": 46,
+     "houdini_calls": 43
+    },
+    {
+     "duration_s": 33.4,
+     "tool_uses": 4,
+     "houdini_calls": 3
+    },
+    {
+     "duration_s": 68.7,
+     "tool_uses": 4,
+     "houdini_calls": 3
+    }
+   ],
+   "duration_total_s": 669.9,
+   "tool_uses_total": 54,
+   "duration_first_s": 567.8,
+   "tool_uses_first": 46
+  },
+  "E1_T_r2": {
+   "style": "T",
+   "rounds": 2,
+   "v": [
+    {
+     "ach": 17,
+     "con": 5,
+     "total": 22,
+     "ach_ex": 16,
+     "con_ex": 5,
+     "n_ex": 28,
+     "fails": [
+      "B02_entry_accel",
+      "B06_hover",
+      "B08_soft_landing",
+      "B11_prelanding_flap",
+      "B15_takeoff",
+      "G02_gaze_lag",
+      "G03_look_at_butterfly",
+      "Q01_no_pop"
+     ],
+     "regressions": []
+    },
+    {
+     "ach": 18,
+     "con": 5,
+     "total": 23,
+     "ach_ex": 17,
+     "con_ex": 5,
+     "n_ex": 28,
+     "fails": [
+      "B02_entry_accel",
+      "B06_hover",
+      "B08_soft_landing",
+      "B11_prelanding_flap",
+      "B15_takeoff",
+      "G02_gaze_lag",
+      "Q01_no_pop"
+     ],
+     "regressions": []
+    },
+    {
+     "ach": 18,
+     "con": 5,
+     "total": 23,
+     "ach_ex": 17,
+     "con_ex": 5,
+     "n_ex": 28,
+     "fails": [
+      "B02_entry_accel",
+      "B06_hover",
+      "B08_soft_landing",
+      "B11_prelanding_flap",
+      "B15_takeoff",
+      "G02_gaze_lag",
+      "Q01_no_pop"
+     ],
+     "regressions": []
+    }
+   ],
+   "first_total": 22,
+   "final_total": 23,
+   "all_pass_round": null,
+   "n_regressions": 0,
+   "cost_rounds": [
+    {
+     "duration_s": 413.8,
+     "tool_uses": 36,
+     "houdini_calls": 33
+    },
+    {
+     "duration_s": 270.8,
+     "tool_uses": 36,
+     "houdini_calls": 35
+    },
+    {
+     "duration_s": 65.2,
+     "tool_uses": 1,
+     "houdini_calls": 1
+    },
+    {
+     "duration_s": 83.9,
+     "tool_uses": 10,
+     "houdini_calls": 9
+    }
+   ],
+   "duration_total_s": 833.7,
+   "tool_uses_total": 83,
+   "duration_first_s": 413.8,
+   "tool_uses_first": 36
+  },
+  "E1_T_r3": {
+   "style": "T",
+   "rounds": 2,
+   "v": [
+    {
+     "ach": 19,
+     "con": 5,
+     "total": 24,
+     "ach_ex": 17,
+     "con_ex": 5,
+     "n_ex": 28,
+     "fails": [
+      "B02_entry_accel",
+      "B05_face_pass",
+      "B06_hover",
+      "B11_prelanding_flap",
+      "B15_takeoff",
+      "Q01_no_pop"
+     ],
+     "regressions": []
+    },
+    {
+     "ach": 19,
+     "con": 6,
+     "total": 25,
+     "ach_ex": 18,
+     "con_ex": 6,
+     "n_ex": 28,
+     "fails": [
+      "B06_hover",
+      "B11_prelanding_flap",
+      "B15_takeoff",
+      "G02_gaze_lag",
+      "Q01_no_pop"
+     ],
+     "regressions": [
+      "G02_gaze_lag"
+     ]
+    },
+    {
+     "ach": 18,
+     "con": 6,
+     "total": 24,
+     "ach_ex": 17,
+     "con_ex": 6,
+     "n_ex": 28,
+     "fails": [
+      "B06_hover",
+      "B11_prelanding_flap",
+      "B12_onhand_flap",
+      "B15_takeoff",
+      "G02_gaze_lag",
+      "Q01_no_pop"
+     ],
+     "regressions": [
+      "B12_onhand_flap"
+     ]
+    }
+   ],
+   "first_total": 24,
+   "final_total": 24,
+   "all_pass_round": null,
+   "n_regressions": 2,
+   "cost_rounds": [
+    {
+     "duration_s": 408.4,
+     "tool_uses": 30,
+     "houdini_calls": 27
+    },
+    {
+     "duration_s": 333.4,
+     "tool_uses": 24,
+     "houdini_calls": 23
+    },
+    {
+     "duration_s": 146.8,
+     "tool_uses": 10,
+     "houdini_calls": 9
+    }
+   ],
+   "duration_total_s": 888.5999999999999,
+   "tool_uses_total": 64,
+   "duration_first_s": 408.4,
+   "tool_uses_first": 30
+  },
+  "E1_Q_r1": {
+   "style": "Q",
+   "rounds": 0,
+   "v": [
+    {
+     "ach": 23,
+     "con": 7,
+     "total": 30,
+     "ach_ex": 21,
+     "con_ex": 7,
+     "n_ex": 28,
+     "fails": [],
+     "regressions": []
+    }
+   ],
+   "first_total": 30,
+   "final_total": 30,
+   "all_pass_round": 0,
+   "n_regressions": 0,
+   "cost_rounds": [
+    {
+     "duration_s": 461.0,
+     "tool_uses": 35,
+     "houdini_calls": 24
+    }
+   ],
+   "duration_total_s": 461.0,
+   "tool_uses_total": 35,
+   "duration_first_s": 461.0,
+   "tool_uses_first": 35
+  },
+  "E1_Q_r2": {
+   "style": "Q",
+   "rounds": 0,
+   "v": [
+    {
+     "ach": 23,
+     "con": 7,
+     "total": 30,
+     "ach_ex": 21,
+     "con_ex": 7,
+     "n_ex": 28,
+     "fails": [],
+     "regressions": []
+    }
+   ],
+   "first_total": 30,
+   "final_total": 30,
+   "all_pass_round": 0,
+   "n_regressions": 0,
+   "cost_rounds": [
+    {
+     "duration_s": 597.4,
+     "tool_uses": 35,
+     "houdini_calls": 33
+    }
+   ],
+   "duration_total_s": 597.4,
+   "tool_uses_total": 35,
+   "duration_first_s": 597.4,
+   "tool_uses_first": 35
+  },
+  "E1_Q_r3": {
+   "style": "Q",
+   "rounds": 0,
+   "v": [
+    {
+     "ach": 23,
+     "con": 7,
+     "total": 30,
+     "ach_ex": 21,
+     "con_ex": 7,
+     "n_ex": 28,
+     "fails": [],
+     "regressions": []
+    }
+   ],
+   "first_total": 30,
+   "final_total": 30,
+   "all_pass_round": 0,
+   "n_regressions": 0,
+   "cost_rounds": [
+    {
+     "duration_s": 480.1,
+     "tool_uses": 26,
+     "houdini_calls": 24
+    }
+   ],
+   "duration_total_s": 480.1,
+   "tool_uses_total": 26,
+   "duration_first_s": 480.1,
+   "tool_uses_first": 26
+  },
+  "E1_M_r1": {
+   "style": "M",
+   "rounds": 0,
+   "v": [
+    {
+     "ach": 23,
+     "con": 7,
+     "total": 30,
+     "ach_ex": 21,
+     "con_ex": 7,
+     "n_ex": 28,
+     "fails": [],
+     "regressions": []
+    }
+   ],
+   "first_total": 30,
+   "final_total": 30,
+   "all_pass_round": 0,
+   "n_regressions": 0,
+   "cost_rounds": [
+    {
+     "duration_s": 527.2,
+     "tool_uses": 45,
+     "houdini_calls": 27
+    }
+   ],
+   "duration_total_s": 527.2,
+   "tool_uses_total": 45,
+   "duration_first_s": 527.2,
+   "tool_uses_first": 45
+  },
+  "E1_M_r2": {
+   "style": "M",
+   "rounds": 0,
+   "v": [
+    {
+     "ach": 23,
+     "con": 7,
+     "total": 30,
+     "ach_ex": 21,
+     "con_ex": 7,
+     "n_ex": 28,
+     "fails": [],
+     "regressions": []
+    }
+   ],
+   "first_total": 30,
+   "final_total": 30,
+   "all_pass_round": 0,
+   "n_regressions": 0,
+   "cost_rounds": [
+    {
+     "duration_s": 677.5,
+     "tool_uses": 43,
+     "houdini_calls": 30
+    }
+   ],
+   "duration_total_s": 677.5,
+   "tool_uses_total": 43,
+   "duration_first_s": 677.5,
+   "tool_uses_first": 43
+  },
+  "E1_M_r3": {
+   "style": "M",
+   "rounds": 0,
+   "v": [
+    {
+     "ach": 23,
+     "con": 7,
+     "total": 30,
+     "ach_ex": 21,
+     "con_ex": 7,
+     "n_ex": 28,
+     "fails": [],
+     "regressions": []
+    }
+   ],
+   "first_total": 30,
+   "final_total": 30,
+   "all_pass_round": 0,
+   "n_regressions": 0,
+   "cost_rounds": [
+    {
+     "duration_s": 526.6,
+     "tool_uses": 39,
+     "houdini_calls": 25
+    }
+   ],
+   "duration_total_s": 526.6,
+   "tool_uses_total": 39,
+   "duration_first_s": 526.6,
+   "tool_uses_first": 39
+  }
+ },
+ "kruskal": [
+  9.480743691899084,
+  0.023537100058601074,
+  0.8100929614873855
+ ],
+ "kruskal_ex": [
+  9.674698795180728,
+  0.021543677306617343
+ ],
+ "mwu": [
+  36.0,
+  0.001389215055049515
+ ],
+ "item_fail": {
+  "B01_entry": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "B02_entry_accel": [
+   2,
+   2,
+   0,
+   0
+  ],
+  "B03_tortuosity": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "B04_bobbing": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "B05_face_pass": [
+   0,
+   1,
+   0,
+   0
+  ],
+  "B06_hover": [
+   2,
+   3,
+   0,
+   0
+  ],
+  "B07_landing_contact": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "B08_soft_landing": [
+   3,
+   1,
+   0,
+   0
+  ],
+  "B09_prelanding_calm": [
+   2,
+   0,
+   0,
+   0
+  ],
+  "B10_flight_flap": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "B11_prelanding_flap": [
+   1,
+   3,
+   0,
+   0
+  ],
+  "B12_onhand_flap": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "B13_wing_range": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "B14_wing_hand_clear": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "B15_takeoff": [
+   3,
+   2,
+   0,
+   0
+  ],
+  "G01_discovery": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "G02_gaze_lag": [
+   0,
+   1,
+   0,
+   0
+  ],
+  "G03_look_at_butterfly": [
+   0,
+   1,
+   0,
+   0
+  ],
+  "G04_head_tilt": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "G05_hand_reach": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "G06_hand_stable": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "G07_hand_up": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "G08_camB_framing": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "G09_other_hand_rest": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "G10_hand_release_after": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "G11_relaxed_fingers": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "P01_cameras_unchanged": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "P02_models_unchanged": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "Q01_no_pop": [
+   1,
+   2,
+   0,
+   0
+  ],
+  "Q02_no_body_penetration": [
+   0,
+   0,
+   0,
+   0
+  ]
+ }
+}

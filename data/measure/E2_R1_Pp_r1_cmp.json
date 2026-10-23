@@ -1,0 +1,24 @@
+{
+ "rcode": "R1",
+ "ref": "D:/claude/butterfly_mcp_paper/houdini/reference.hip",
+ "rev": "D:/claude/butterfly_mcp_paper/houdini/trials/E2_R1_Pp_r1.hip",
+ "target": {
+  "hover_ref": 20,
+  "hover_rev": 25,
+  "pass": false
+ },
+ "collateral": {
+  "butterfly_rms_cm": 2.073,
+  "butterfly_max_cm": 11.313,
+  "flap_rms_deg": 0.0,
+  "landing_ref": 128,
+  "landing_rev": 129,
+  "head_mean_deg": 0.0,
+  "left_hand_rms_cm": 0.0,
+  "right_hand_rms_cm": 0.0,
+  "left_fingers_mean_deg": 0.0,
+  "right_fingers_mean_deg": 0.0,
+  "camera_parms_changed": 0
+ },
+ "preserved": false
+}

@@ -1,0 +1,329 @@
+{
+ "hip": "D:/claude/butterfly_mcp_paper/houdini/trials/E1_N_r2_v1.hip",
+ "checks": {
+  "B01_entry": {
+   "value": {
+    "out_at_F1": true,
+    "first_in_frame": 27
+   },
+   "pass": true,
+   "note": "",
+   "type": "achievement"
+  },
+  "B02_entry_accel": {
+   "value": 3.221,
+   "pass": true,
+   "note": "",
+   "type": "constraint"
+  },
+  "B03_tortuosity": {
+   "value": 2.394,
+   "pass": true,
+   "note": "",
+   "type": "achievement"
+  },
+  "B04_bobbing": {
+   "value": 8.93,
+   "pass": true,
+   "note": "mm",
+   "type": "achievement"
+  },
+  "B05_face_pass": {
+   "value": {
+    "min_dist": 0.248,
+    "front": true,
+    "frame": 57
+   },
+   "pass": true,
+   "note": "",
+   "type": "achievement"
+  },
+  "B06_hover": {
+   "value": 0,
+   "pass": false,
+   "note": "frames",
+   "type": "achievement"
+  },
+  "B07_landing_contact": {
+   "value": {
+    "d_F132_cm": 0.66,
+    "max_cm": 0.66
+   },
+   "pass": true,
+   "note": "",
+   "type": "achievement"
+  },
+  "B08_soft_landing": {
+   "value": 0.088,
+   "pass": false,
+   "note": "m/s",
+   "type": "achievement"
+  },
+  "B09_prelanding_calm": {
+   "value": {
+    "ratio": 0.284,
+    "noise_flight_mm": 19.96,
+    "noise_pre_mm": 5.66
+   },
+   "pass": true,
+   "note": "",
+   "type": "achievement"
+  },
+  "B10_flight_flap": {
+   "value": {
+    "hz": 4.8,
+    "amp": 91.3
+   },
+   "pass": true,
+   "note": "",
+   "type": "achievement"
+  },
+  "B11_prelanding_flap": {
+   "value": {
+    "hz_ratio": 1.19,
+    "amp_ratio": 1.0
+   },
+   "pass": false,
+   "note": "",
+   "type": "achievement"
+  },
+  "B12_onhand_flap": {
+   "value": {
+    "cycles": 3,
+    "hz": 1.01,
+    "amp": 58.0
+   },
+   "pass": true,
+   "note": "",
+   "type": "achievement"
+  },
+  "B13_wing_range": {
+   "value": {
+    "min": -15.7,
+    "max": 77.7
+   },
+   "pass": true,
+   "note": "",
+   "type": "constraint"
+  },
+  "B14_wing_hand_clear": {
+   "value": 8.65,
+   "pass": true,
+   "note": "mm",
+   "type": "achievement"
+  },
+  "B15_takeoff": {
+   "value": {
+    "lift_frames": 0,
+    "dist_F264": 1.07
+   },
+   "pass": false,
+   "note": "",
+   "type": "achievement"
+  },
+  "G01_discovery": {
+   "value": 22.67,
+   "pass": true,
+   "note": "",
+   "type": "achievement"
+  },
+  "G02_gaze_lag": {
+   "value": {
+    "lag_frames": 3,
+    "r": 0.915
+   },
+   "pass": true,
+   "note": "",
+   "type": "achievement"
+  },
+  "G03_look_at_butterfly": {
+   "value": 4.26,
+   "pass": true,
+   "note": "",
+   "type": "achievement"
+  },
+  "G04_head_tilt": {
+   "value": 7.24,
+   "pass": true,
+   "note": "",
+   "type": "achievement"
+  },
+  "G05_hand_reach": {
+   "value": {
+    "onset": 53,
+    "end": 93,
+    "speed_peaks": 1
+   },
+   "pass": true,
+   "note": "",
+   "type": "achievement"
+  },
+  "G06_hand_stable": {
+   "value": 0.0,
+   "pass": true,
+   "note": "cm",
+   "type": "achievement"
+  },
+  "G07_hand_up": {
+   "value": 2.13,
+   "pass": true,
+   "note": "",
+   "type": "achievement"
+  },
+  "G08_camB_framing": {
+   "value": true,
+   "pass": true,
+   "note": "",
+   "type": "achievement"
+  },
+  "G09_other_hand_rest": {
+   "value": 0.0,
+   "pass": true,
+   "note": "cm",
+   "type": "constraint"
+  },
+  "G10_hand_release_after": {
+   "value": {
+    "far": 250,
+    "lower": null
+   },
+   "pass": true,
+   "note": "",
+   "type": "achievement"
+  },
+  "G11_relaxed_fingers": {
+   "value": "see metrics.finger_curl",
+   "pass": true,
+   "note": "",
+   "type": "achievement"
+  },
+  "Q01_no_pop": {
+   "value": {
+    "butterfly": 0,
+    "hand": 0
+   },
+   "pass": true,
+   "note": "",
+   "type": "constraint"
+  },
+  "Q02_no_body_penetration": {
+   "value": {
+    "min_dist_cm": 0.68,
+    "frame": 222
+   },
+   "pass": true,
+   "note": "",
+   "type": "constraint"
+  },
+  "P01_cameras_unchanged": {
+   "value": 0,
+   "pass": true,
+   "note": "changed parms",
+   "type": "constraint"
+  },
+  "P02_models_unchanged": {
+   "value": [],
+   "pass": true,
+   "note": "",
+   "type": "constraint"
+  }
+ },
+ "metrics": {
+  "butterfly_speed_mean": 0.34104028348639565,
+  "landing_frame_actual": 130,
+  "jerk_mean_F1_96": 22.719486114715394,
+  "jerk_mean_F108_128": 7.035126095124775,
+  "flap_flight": {
+   "freq_hz": 4.8,
+   "amp_deg": 91.30142556433987,
+   "n_cycles": 19,
+   "min_deg": -15.650712782167403,
+   "max_deg": 75.65071278217246
+  },
+  "flap_prelanding": {
+   "freq_hz": 5.714285714285714,
+   "amp_deg": 91.30142556433495,
+   "n_cycles": 5,
+   "min_deg": -15.650712782160397,
+   "max_deg": 75.65071278217455
+  },
+  "flap_onhand": {
+   "freq_hz": 1.0140845070422535,
+   "amp_deg": 58.0,
+   "n_cycles": 3,
+   "min_deg": 12.0,
+   "max_deg": 70.0
+  },
+  "flap_takeoff": {
+   "freq_hz": 6.0,
+   "amp_deg": 73.47786580670396,
+   "n_cycles": 7,
+   "min_deg": 0.18019484660469987,
+   "max_deg": 73.65806065330867
+  },
+  "gaze_lag_yaw": [
+   3,
+   0.5378759844434641
+  ],
+  "gaze_lag_pitch": [
+   3,
+   0.9151056460481046
+  ],
+  "gaze_lag_velocity_yaw": [
+   2,
+   0.8455695159191885
+  ],
+  "finger_curl": {
+   "left_F1": {
+    "index": 20.0,
+    "middle": 24.0,
+    "ring": 38.0,
+    "little": 48.0
+   },
+   "left_F180": {
+    "index": 20.0,
+    "middle": 24.0,
+    "ring": 38.0,
+    "little": 48.0
+   },
+   "left_F264": {
+    "index": 20.0,
+    "middle": 24.0,
+    "ring": 38.0,
+    "little": 48.0
+   },
+   "right_F1": {
+    "index": 20.0,
+    "middle": 24.0,
+    "ring": 38.0,
+    "little": 48.0
+   },
+   "right_F180": {
+    "index": 20.0,
+    "middle": 24.0,
+    "ring": 38.0,
+    "little": 48.0
+   },
+   "right_F264": {
+    "index": 20.0,
+    "middle": 24.0,
+    "ring": 38.0,
+    "little": 48.0
+   }
+  },
+  "hand_raised": true,
+  "landed": true,
+  "took_off": true
+ },
+ "n_checks": 30,
+ "n_pass": 26,
+ "pass_rate": 0.8666666666666667,
+ "achievement": {
+  "n": 23,
+  "pass": 19
+ },
+ "constraint": {
+  "n": 7,
+  "pass": 7
+ }
+}

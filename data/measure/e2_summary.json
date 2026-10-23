@@ -1,0 +1,354 @@
+{
+ "rows": [
+  {
+   "trial": "E2_R1_Pm_r1",
+   "R": "R1",
+   "P": "Pm",
+   "target": true,
+   "preserved": false,
+   "path_rms_cm": 9.459,
+   "path_max_cm": 29.701,
+   "flap_rms": 0.0,
+   "landing_shift": 0,
+   "head_deg": 0.0,
+   "hands_cm": 0.0,
+   "cams": 0,
+   "regressions": [
+    "G02_gaze_lag"
+   ],
+   "n_reg": 1,
+   "duration_s": 102.7,
+   "tool_uses": 10,
+   "tvals": {
+    "hover_ref": 20,
+    "hover_rev": 32,
+    "pass": true
+   }
+  },
+  {
+   "trial": "E2_R1_Pm_r2",
+   "R": "R1",
+   "P": "Pm",
+   "target": true,
+   "preserved": false,
+   "path_rms_cm": 7.298,
+   "path_max_cm": 20.226,
+   "flap_rms": 21.998,
+   "landing_shift": 0,
+   "head_deg": 0.0,
+   "hands_cm": 0.0,
+   "cams": 0,
+   "regressions": [
+    "G02_gaze_lag"
+   ],
+   "n_reg": 1,
+   "duration_s": 111.2,
+   "tool_uses": 12,
+   "tvals": {
+    "hover_ref": 20,
+    "hover_rev": 30,
+    "pass": true
+   }
+  },
+  {
+   "trial": "E2_R1_Pp_r1",
+   "R": "R1",
+   "P": "Pp",
+   "target": false,
+   "preserved": false,
+   "path_rms_cm": 2.073,
+   "path_max_cm": 11.313,
+   "flap_rms": 0.0,
+   "landing_shift": 1,
+   "head_deg": 0.0,
+   "hands_cm": 0.0,
+   "cams": 0,
+   "regressions": [
+    "Q01_no_pop"
+   ],
+   "n_reg": 1,
+   "duration_s": 98.4,
+   "tool_uses": 8,
+   "tvals": {
+    "hover_ref": 20,
+    "hover_rev": 25,
+    "pass": false
+   }
+  },
+  {
+   "trial": "E2_R1_Pp_r2",
+   "R": "R1",
+   "P": "Pp",
+   "target": true,
+   "preserved": false,
+   "path_rms_cm": 2.461,
+   "path_max_cm": 12.896,
+   "flap_rms": 0.0,
+   "landing_shift": 2,
+   "head_deg": 0.0,
+   "hands_cm": 0.0,
+   "cams": 0,
+   "regressions": [
+    "B09_prelanding_calm",
+    "Q01_no_pop"
+   ],
+   "n_reg": 2,
+   "duration_s": 93.0,
+   "tool_uses": 8,
+   "tvals": {
+    "hover_ref": 20,
+    "hover_rev": 30,
+    "pass": true
+   }
+  },
+  {
+   "trial": "E2_R2_Pm_r1",
+   "R": "R2",
+   "P": "Pm",
+   "target": true,
+   "preserved": true,
+   "path_rms_cm": 0.0,
+   "path_max_cm": 0.0,
+   "flap_rms": 0.0,
+   "landing_shift": 0,
+   "head_deg": 0.0,
+   "hands_cm": 0.0,
+   "cams": 0,
+   "regressions": [],
+   "n_reg": 0,
+   "duration_s": 32.4,
+   "tool_uses": 6,
+   "tvals": {
+    "curl_span_ref": 5.99,
+    "curl_span_rev": 25.37,
+    "pass": true
+   }
+  },
+  {
+   "trial": "E2_R2_Pm_r2",
+   "R": "R2",
+   "P": "Pm",
+   "target": true,
+   "preserved": true,
+   "path_rms_cm": 0.0,
+   "path_max_cm": 0.0,
+   "flap_rms": 0.0,
+   "landing_shift": 0,
+   "head_deg": 0.0,
+   "hands_cm": 0.0,
+   "cams": 0,
+   "regressions": [],
+   "n_reg": 0,
+   "duration_s": 30.0,
+   "tool_uses": 6,
+   "tvals": {
+    "curl_span_ref": 5.99,
+    "curl_span_rev": 17.32,
+    "pass": true
+   }
+  },
+  {
+   "trial": "E2_R2_Pp_r1",
+   "R": "R2",
+   "P": "Pp",
+   "target": true,
+   "preserved": true,
+   "path_rms_cm": 0.0,
+   "path_max_cm": 0.0,
+   "flap_rms": 0.0,
+   "landing_shift": 0,
+   "head_deg": 0.0,
+   "hands_cm": 0.0,
+   "cams": 0,
+   "regressions": [],
+   "n_reg": 0,
+   "duration_s": 47.3,
+   "tool_uses": 8,
+   "tvals": {
+    "curl_span_ref": 5.99,
+    "curl_span_rev": 19.9,
+    "pass": true
+   }
+  },
+  {
+   "trial": "E2_R2_Pp_r2",
+   "R": "R2",
+   "P": "Pp",
+   "target": true,
+   "preserved": true,
+   "path_rms_cm": 0.0,
+   "path_max_cm": 0.0,
+   "flap_rms": 0.0,
+   "landing_shift": 0,
+   "head_deg": 0.0,
+   "hands_cm": 0.0,
+   "cams": 0,
+   "regressions": [],
+   "n_reg": 0,
+   "duration_s": 34.6,
+   "tool_uses": 7,
+   "tvals": {
+    "curl_span_ref": 5.99,
+    "curl_span_rev": 25.4,
+    "pass": true
+   }
+  },
+  {
+   "trial": "E2_R3_Pm_r1",
+   "R": "R3",
+   "P": "Pm",
+   "target": true,
+   "preserved": true,
+   "path_rms_cm": 0.0,
+   "path_max_cm": 0.0,
+   "flap_rms": 0.0,
+   "landing_shift": 0,
+   "head_deg": 0.0,
+   "hands_cm": 0.0,
+   "cams": 0,
+   "regressions": [
+    "B13_wing_range",
+    "Q01_no_pop"
+   ],
+   "n_reg": 2,
+   "duration_s": 140.3,
+   "tool_uses": 11,
+   "tvals": {
+    "noise_ref_mm": 22.13,
+    "noise_rev_mm": 44.86,
+    "tort_ref": 3.533,
+    "tort_rev": 5.563,
+    "pass": true
+   }
+  },
+  {
+   "trial": "E2_R3_Pm_r2",
+   "R": "R3",
+   "P": "Pm",
+   "target": true,
+   "preserved": true,
+   "path_rms_cm": 0.0,
+   "path_max_cm": 0.0,
+   "flap_rms": 0.0,
+   "landing_shift": 0,
+   "head_deg": 0.0,
+   "hands_cm": 0.0,
+   "cams": 0,
+   "regressions": [
+    "Q01_no_pop"
+   ],
+   "n_reg": 1,
+   "duration_s": 136.2,
+   "tool_uses": 12,
+   "tvals": {
+    "noise_ref_mm": 22.13,
+    "noise_rev_mm": 54.75,
+    "tort_ref": 3.533,
+    "tort_rev": 5.621,
+    "pass": true
+   }
+  },
+  {
+   "trial": "E2_R3_Pp_r1",
+   "R": "R3",
+   "P": "Pp",
+   "target": true,
+   "preserved": true,
+   "path_rms_cm": 0.0,
+   "path_max_cm": 0.0,
+   "flap_rms": 0.0,
+   "landing_shift": 0,
+   "head_deg": 0.0,
+   "hands_cm": 0.0,
+   "cams": 0,
+   "regressions": [
+    "Q01_no_pop"
+   ],
+   "n_reg": 1,
+   "duration_s": 131.1,
+   "tool_uses": 16,
+   "tvals": {
+    "noise_ref_mm": 22.13,
+    "noise_rev_mm": 40.99,
+    "tort_ref": 3.533,
+    "tort_rev": 4.783,
+    "pass": true
+   }
+  },
+  {
+   "trial": "E2_R3_Pp_r2",
+   "R": "R3",
+   "P": "Pp",
+   "target": true,
+   "preserved": true,
+   "path_rms_cm": 0.0,
+   "path_max_cm": 0.0,
+   "flap_rms": 0.0,
+   "landing_shift": 0,
+   "head_deg": 0.0,
+   "hands_cm": 0.0,
+   "cams": 0,
+   "regressions": [],
+   "n_reg": 0,
+   "duration_s": 174.2,
+   "tool_uses": 16,
+   "tvals": {
+    "noise_ref_mm": 22.13,
+    "noise_rev_mm": 29.85,
+    "tort_ref": 3.533,
+    "tort_rev": 3.834,
+    "pass": true
+   }
+  }
+ ],
+ "summary": {
+  "R1Pp": {
+   "target": 1,
+   "preserved": 0,
+   "path": 2.267,
+   "reg": 1.5,
+   "dur": 95.7,
+   "n": 2
+  },
+  "R1Pm": {
+   "target": 2,
+   "preserved": 0,
+   "path": 8.378499999999999,
+   "reg": 1,
+   "dur": 106.95,
+   "n": 2
+  },
+  "R2Pp": {
+   "target": 2,
+   "preserved": 2,
+   "path": 0.0,
+   "reg": 0,
+   "dur": 40.95,
+   "n": 2
+  },
+  "R2Pm": {
+   "target": 2,
+   "preserved": 2,
+   "path": 0.0,
+   "reg": 0,
+   "dur": 31.2,
+   "n": 2
+  },
+  "R3Pp": {
+   "target": 2,
+   "preserved": 2,
+   "path": 0.0,
+   "reg": 0.5,
+   "dur": 152.64999999999998,
+   "n": 2
+  },
+  "R3Pm": {
+   "target": 2,
+   "preserved": 2,
+   "path": 0.0,
+   "reg": 1.5,
+   "dur": 138.25,
+   "n": 2
+  }
+ }
+}
